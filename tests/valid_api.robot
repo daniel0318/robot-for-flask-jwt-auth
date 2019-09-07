@@ -11,13 +11,13 @@ ${OAUTH_TOKEN}  ${EMPTY}
 *** Test Cases ***
 Valid Register
     Given Delete Credential "${NEW_EMAIL}" From DB
-    And Register with ${NEW_EMAIL} and ${NEW_PASSWORD}
+    When Register with ${NEW_EMAIL} and ${NEW_PASSWORD}
     Then Body Message Is "Successfully registered."
     And Body Status Is "success"
     And Status Code Is 201
 
 Valid Login
-    Given Valid Login
+    When Valid Login
     Then Body Message Is "Successfully logged in."
     And Body Status Is "success"
     And Status Code Is 200

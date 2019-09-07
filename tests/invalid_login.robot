@@ -17,7 +17,7 @@ Empty Email And Password         ${EMPTY}         ${EMPTY}
 *** Keywords ***
 Login with Invalid Credentials Should Fail
     [Arguments]     ${email}    ${password}
-    Given Login with ${email} and ${password}
+    When Login with ${email} and ${password}
     Then Body Message Is "User does not exist."
     And Body Status Is "fail"
     And Status Code Is 404

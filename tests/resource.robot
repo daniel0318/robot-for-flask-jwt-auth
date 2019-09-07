@@ -21,7 +21,7 @@ ${TOKEN_LEGAL_TIME}     4
 *** Keywords ***
 # Basic API
 Register with ${email} and ${password}
-    ${RES}=     POST                /auth/register  { "email": "${email}", "password": "${password}" }
+    POST        /auth/register  { "email": "${email}", "password": "${password}" }
 
 Login with ${email} and ${password}
     ${RES}=     POST                /auth/login     { "email": "${email}", "password": "${password}" }
