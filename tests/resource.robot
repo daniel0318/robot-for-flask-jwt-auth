@@ -2,26 +2,28 @@
 Documentation   A practice in robotframework on token-authentication login API
 ...             test suites include valid_api, invalid_login, token_timeout
 ...             using gherkin style on top level
+...             Note: 1. MUST register (VALID_EMAIL, VALID_PASSWORD) first
+...                   2. timeout set 5 seconds
 ...             Reference:
 ...                 login API: github.com/realpython/flask-jwt-auth.git
 ...                 REST library in robot: github.com/asyrjasalo/RESTinstance.git
-...
 Library         REST    http://localhost:5000
+Library         OperatingSystem
 
 
 *** Variables ***
 ${NEW_EMAIL}            daniel@gmail.com
 ${NEW_PASSWORD}         leinad
+# Valid incredential MUST have already registered
 ${VALID_EMAIL}          joe@gmail.com
 ${VALID_PASSWORD}       123456
 ${TOKEN_TIMEOUT}        6
-${TOKEN_LEGAL_TIME}     4
-
+${AUTH_TOKEN}           ${EMPTY}
 
 *** Keywords ***
 # Basic API
 Register with ${email} and ${password}
-    POST        /auth/register  { "email": "${email}", "password": "${password}" }
+    POST        /auth/register      { "email": "${email}", "password": "${password}" }
 
 Login with ${email} and ${password}
     ${RES}=     POST                /auth/login     { "email": "${email}", "password": "${password}" }
@@ -40,6 +42,10 @@ Logout
 # Medium Level Keyword
 Valid Login
     Login with ${VALID_EMAIL} and ${VALID_PASSWORD}
+
+Delete Account "${email}" From DB
+    ${output}=      Run  psql -d flask_jwt_auth -c "DELETE FROM users WHERE email = '${email}'"   
+    LOG             ${output}
 
 # Response Checking Format
 Body Message Is "${message}"
