@@ -7,7 +7,7 @@ Resource        resource.robot
 Duplicate Register
     Given Delete Account "${NEW_EMAIL}" From DB
     And Register with ${NEW_EMAIL} and ${NEW_PASSWORD}
-    Then Register with ${NEW_EMAIL} and ${NEW_PASSWORD}
+    When Register with ${NEW_EMAIL} and ${NEW_PASSWORD}
     Then Body Message Is "User already exists. Please Log in."
     And Body Status Is "fail"
     And Status Code Is 202
