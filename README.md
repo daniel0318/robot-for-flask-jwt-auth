@@ -20,7 +20,7 @@ source.robot:
 3. token_timeout.robot
     - positive and negative testing related to whether token expires
     - workflow tests
-    
+### [Testing Result](results/report.html)
 ## How to generate testing report
 
 ### Install
