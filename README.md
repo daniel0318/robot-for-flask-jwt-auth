@@ -26,8 +26,13 @@ source.robot:
 ## How to generate testing report
 
 ### Install
-Follow 2 references tutorial, do all their installation
-ex. install postgres, install robot
+- Follow 2 references tutorial, do all their installations
+  ex. install postgres, install robot
+- Run login server
+```sh
+$ python manage.py runserver
+```
+
 
 ### run robot test
 ```sh
