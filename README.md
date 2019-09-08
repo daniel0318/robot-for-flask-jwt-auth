@@ -17,9 +17,12 @@ source.robot:
     - negative testing for login
     - data-driven tests
     
-3. token_timeout.robot
-    - positive and negative testing related to whether token expires
-    - workflow tests
+3. invalid_register.robot
+    - invalid situation related to register
+    
+4. invalid_token.robot
+    - Test cases with token faked or token expired
+    
 ### Generated Results
 - [report.html](https://daniel0318.github.io/robot-for-flask-jwt-auth/report.html)
 - [log.html](https://daniel0318.github.io/robot-for-flask-jwt-auth/log.html)
