@@ -20,7 +20,9 @@ source.robot:
 3. token_timeout.robot
     - positive and negative testing related to whether token expires
     - workflow tests
-### [Testing Result](results/report.html)
+### Generated Results
+- [report.html](https://daniel0318.github.io/robot-for-flask-jwt-auth/report.html)
+- [log.html](https://daniel0318.github.io/robot-for-flask-jwt-auth/log.html)
 ## How to generate testing report
 
 ### Install
