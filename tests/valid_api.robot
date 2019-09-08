@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation   Workflow test suite on 5 API provided by the server
+Documentation   Workflow test suite on 4 API provided by the server
 ...             Note Register will delete previous email account.
 Resource        resource.robot 
 

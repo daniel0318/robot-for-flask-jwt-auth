@@ -3,7 +3,7 @@ Documentation   A practice in robotframework on token-authentication login API
 ...             test suites include valid_api, invalid_login, token_timeout
 ...             using gherkin style on top level
 ...             Note: 1. MUST register (VALID_EMAIL, VALID_PASSWORD) first
-...                   2. timeout set 5 seconds
+...                   2. token expiration on server should set 5 seconds
 ...             Reference:
 ...                 login API: github.com/realpython/flask-jwt-auth.git
 ...                 REST library in robot: github.com/asyrjasalo/RESTinstance.git

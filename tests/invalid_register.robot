@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation   Test timeout functionality
+Documentation   Test invalid situation related to register
 Resource        resource.robot 
 
 

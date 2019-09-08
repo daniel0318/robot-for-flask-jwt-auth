@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation   Test timeout functionality
+Documentation   Test cases with token faked or token expired
 Resource        resource.robot 
 
 
