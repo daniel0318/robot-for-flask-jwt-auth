@@ -1,8 +1,15 @@
 # robot-for-flask-jwt-auth
-Some test cases using robot framework to test jwt-token authentication API
+Some test cases using robot framework for a login server with jwt token authentication
+  - Login server provide 4 restful APIs.
+    1. Register 
+    2. Login
+    3. Get user status
+    4. Logout
+
+  - This repo provides a series of tests suites written in robot framework
 
 ## Reference
-1. [server API] https://github.com/realpython/flask-jwt-auth
+1. [jwt authentication server] https://github.com/realpython/flask-jwt-auth
 2. [robot framework restAPI library] https://github.com/asyrjasalo/RESTinstance
 
 ## Test Suites
